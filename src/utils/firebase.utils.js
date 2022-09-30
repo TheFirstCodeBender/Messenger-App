@@ -34,7 +34,7 @@ export const getMessages = async () => {
     const [messages, setMessages] = useState({});
 
     useEffect(() => {
-        const getDocs = async () {
+        const getDocs = async () => {
             const messagesRef = collection(db, "messages");
             const messageSnap = await getDoc(messagesRef);
             setMessages(messageSnap.data())
